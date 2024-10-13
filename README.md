@@ -142,7 +142,7 @@ defmodule YourProject.UserStateMachine do
   # You can add an optional third argument for the extra metadata.
   def persist(struct, next_state) do
     # Updating a user on the database with the new state.
-    {:ok, user} = Accounts.update_user(struct, %{state: next_stated})
+    {:ok, user} = Accounts.update_user(struct, %{state: next_state})
     # `persist` should always return the updated struct
     user
   end
